@@ -1,0 +1,5 @@
+#Jesus is king
+---
+scoreboard-already-bool: "§fThe §escoreboard§f already setted to {type_bool}"
+scoreboard-activate-changed: "§fActivate of §escoreboard§f changed to {type_bool}"
+...
