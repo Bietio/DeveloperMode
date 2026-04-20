@@ -1,0 +1,19 @@
+#Jesus is king
+---
+name: DeveloperMode
+main: DeveloperMode\Loader
+version: 1.0
+api: 2.0.0
+depend: [SmartCommand]
+author: Bietio
+website: https://github.com/Bietio/DeveloperMode
+description: "Command utils for developers"
+resources: [
+  'config.yml',
+  'messages.yml'
+]
+
+permissions:
+  developer.command:
+    default: op
+...
