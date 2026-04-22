@@ -3,3 +3,6 @@
 
 ### Commands:
 - **/developer** scoreboard <active: boolean> enable or disable scoreboard with infos.
+
+### Scoreboard screenshot:
+<img src="images/scoreboard.png">
