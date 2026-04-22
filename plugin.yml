@@ -2,7 +2,7 @@
 ---
 name: DeveloperMode
 main: DeveloperMode\Loader
-version: 1.0
+version: 1.1.0
 api: 2.0.0
 depend: [SmartCommand]
 author: Bietio
