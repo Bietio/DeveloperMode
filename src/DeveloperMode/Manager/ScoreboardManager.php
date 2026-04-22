@@ -4,7 +4,7 @@ namespace DeveloperMode\Manager;
 
 use DeveloperMode\Data\Data;
 use DeveloperMode\Data\Objects\DeveloperObject;
-
+use DeveloperMode\Services\PlayerService;
 use DeveloperMode\Utils\Settings;
 use DeveloperMode\Utils\Message\MessageFormatter as Message;
 
@@ -66,33 +66,18 @@ class ScoreboardManager
         $item = $player->getItemInHand();
         $itemInHandName = $item->getName();
         $itemInHandId = "{$item->getId()}:{$item->getDamage()}";
-        $gamemode = '';
 
-        switch ($player->getGamemode()) 
-        {
-            case Player::SURVIVAL:
-                $gamemode = '§aSurvival';
-                break;
-            case Player::CREATIVE:
-                $gamemode = '§bCreative';
-                break;
-            case Player::ADVENTURE:
-                $gamemode = '§eAdventure';
-                break;
-            case Player::SPECTATOR:
-            case Player::VIEW:
-                $gamemode = '§dSpectator';
-                break;
-            default:
-                $gamemode = '§cUnknown';
-                break;
-        }
+        $gamemode = PlayerService::getGamemodeName($player->getGamemode());
+        $direction = PlayerService::getDirectionName($player->getDirection());
 
         $scoreboard->setFormats([
             'player_name' => $player->getName(),
             'gamemode' => $gamemode,
+            'direction' => $direction,
             'item_name' => $itemInHandName,
             'item_id' => $itemInHandId,
+            'yaw' => number_format($player->getYaw(), 3, '.', ''),
+            'pitch' => number_format($player->getPitch(), 3, '.', ''),
             'x' => number_format($player->getX(), 3, '.', ''),
             'y' => number_format($player->getY(), 3, '.', ''),
             'z' => number_format($player->getZ(), 3, '.', ''),
