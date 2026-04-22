@@ -1,5 +1,5 @@
 #Jesus is king
 ---
 prefix: "§c» "
-scoreboard: "{l}§8---( §l§eDeveloper§cBAR§r §8)---\n{l}§fPlayer name§7={player_name}\n{l}§fGamemode§7={gamemode}\n{l}§fBlock name§7={item_name}\n{l}§fBlock id§7={item_id}\n{l}§fWorld name§7={level}\n{l}§fX§7={x} §fY§7={y} §fZ§7={z}"
+scoreboard: "{l}§8---( §l§eDeveloper§cBAR§r §8)---\n{l}§fPlayer name§7={player_name}\n{l}§fGamemode§7={gamemode}\n{l}§fBlock name§7={item_name}\n{l}§fBlock id§7={item_id}\n{l}§fWorld name§7={level}\n{l}§fDirection§7={direction}\n{l}§fYaw§7={yaw} §fPitch§7={pitch}\n{l}§cX§7={x} §aY§7={y} §bZ§7={z}"
 ...
